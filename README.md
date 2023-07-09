@@ -46,6 +46,7 @@ Zdecydowałam się na udział w tym Challengu, ponieważ niedawno uczestniczyła
 7. Sign in button 
 	* //*[@id="__next"]/form/div/div[2]/button/span[1]
 	* //*[text()='Sign in']
+	* //*[contains(@type,"submit")]
 
 	
 	
