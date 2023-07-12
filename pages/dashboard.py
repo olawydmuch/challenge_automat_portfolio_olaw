@@ -1,4 +1,5 @@
 from pages.base_page import BasePage
+import time
 
 class Dashboard(BasePage):
     main_page_xpath= "//*[text()='Main page']"
@@ -15,4 +16,19 @@ class Dashboard(BasePage):
     shortcuts_count_xpath = "//*[text()='Shortcuts count']"
     activity_xpath = "//*[text()='Activity']"
 
-    pass
+    expected_title = "Scouts panel"
+    dashboard_url = "https://scouts-test.futbolkolektyw.pl/en"
+
+    add_player_url = 'https://scouts-test.futbolkolektyw.pl/en/players/add'
+    add_player_expected_title= "Add player"
+
+    def title_of_page(self):
+        time.sleep(5)
+        assert self.get_page_title(self.dashboard_url) == self.expected_title
+
+    def add_player_page(self):
+        self.click_on_the_element(self.add_player_xpath)
+        time.sleep(5)
+        assert self.get_page_title(self.add_player_url) == self.add_player_expected_title
+
+    #pass
