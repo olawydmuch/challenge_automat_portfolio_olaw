@@ -28,7 +28,7 @@ class TestAddPlayer(unittest.TestCase):
         user_login.enter_password('Test-1234')
         user_login.sign_in()
         dashboard_page = Dashboard(self.driver)
-        dashboard_page.add_player_page()
+        dashboard_page.add_player_button()
         time.sleep(5)
 
     @classmethod

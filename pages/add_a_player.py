@@ -9,6 +9,9 @@ class AddPlayer(BasePage):
     phone_xpath= "//*[@name='phone']"
     submit_button_xpath= "//*[text()='Submit']"
 
-    #def add_a_player_button(self):
-        #self.click_on_the_element(self.add_player_button_xpath)
+    add_player_url = 'https://scouts-test.futbolkolektyw.pl/en/players/add'
+    add_player_expected_title = "Add player"
+
+    def title_of_add_player_page(self):
+        assert self.get_page_title(self.add_player_url) == self.add_player_expected_title
 #pass

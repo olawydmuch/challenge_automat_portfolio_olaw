@@ -26,7 +26,7 @@ class Dashboard(BasePage):
         time.sleep(5)
         assert self.get_page_title(self.dashboard_url) == self.expected_title
 
-    def add_player_page(self):
+    def add_player_button(self):
         self.click_on_the_element(self.add_player_xpath)
         time.sleep(5)
         assert self.get_page_title(self.add_player_url) == self.add_player_expected_title
