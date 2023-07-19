@@ -1,8 +1,11 @@
 from pages.base_page import BasePage
 
-class Dashboard(BasePage):
-    my_team_xpath= "//*[@name='myTeam']"
-    enemy_xpath= "//*[@name='enemyTeam']"
+
+class AddMatch(BasePage):
+    match_button_xpath = "//*[text()='Matches']"
+    add_match_xpath = "//*[@id='__next']/div[1]/main/a/button/span[1]"
+    my_team_xpath = "//*[@name='myTeam']"
+    enemy_team_xpath = "//*[@name='enemyTeam']"
     my_team_score_xpath = "//*[@name='myTeamScore']"
     enemy_team_score_xpath = "//*[@name='enemyTeamScore']"
     date_xpath = "//*[@name='date']"
@@ -20,4 +23,27 @@ class Dashboard(BasePage):
     players_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[3]/div[2]"
     reports_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[1]/div[2]"
 
-    pass
+    def matches(self):
+        self.click_on_the_element(self.match_button_xpath)
+
+    def add_match(self):
+        self.click_on_the_element(self.add_match_xpath)
+    # pass
+
+    def type_in_my_team(self,my_team):
+        self.field_send_keys(self.my_team_xpath, my_team)
+
+    def type_in_enemy_team(self,enemy_team):
+        self.field_send_keys(self.enemy_team_xpath, enemy_team)
+
+    def type_in_my_team_score(self,my_team_score):
+        self.field_send_keys(self.my_team_score_xpath,my_team_score)
+
+    def type_in_enemy_team_score(self, enemy_team_score):
+        self.field_send_keys(self.enemy_team_score_xpath, enemy_team_score)
+
+    def type_in_date(self, date):
+        self.field_send_keys(self.date_xpath, date)
+
+    def submit(self):
+        self.click_on_the_element(self.submit_button_xpath)

@@ -6,7 +6,7 @@ Zdecydowałam się na udział w tym Challengu, ponieważ niedawno uczestniczyła
 
 ### Subtask 4- Test ISTQB
 
-13/15
+13/14
 
 --- 
 
@@ -47,6 +47,10 @@ Zdecydowałam się na udział w tym Challengu, ponieważ niedawno uczestniczyła
 	* //*[@id="__next"]/form/div/div[2]/button/span[1]
 	* //*[text()='Sign in']
 	* //*[contains(@type,"submit")]
+	
+## TASK 4
+
+https://drive.google.com/drive/folders/1yN8eLOoddhHB1TDGCP4eNKjwbdic5g6Q
 
 	
 	
